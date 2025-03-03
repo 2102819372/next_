@@ -8,9 +8,16 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    // screens: {},
+    debugScreens: {
+      selector: ".debug-screens",
+    },
     extend: {
       screens: {
         large: "1600px",
+        xl: "1280px",
+        md: "768px",
+        sm: "640px",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -73,7 +80,16 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily:{
+        "--abcNormal":["abcNormal", "abcNormal Fallback"]
+      },
+      transitionDuration:{
+        "3s":"3000ms"
+      }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwindcss-debug-screens"),
+  ],
 } satisfies Config;

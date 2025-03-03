@@ -2,36 +2,66 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import { usePathname } from "next/navigation";
 export default function Header() {
+  const pathname = usePathname();
+
   const baseClassName = [
     "fixed top-0 w-full z-50 transition-colors duration-200 bg-opacity-95 py-4 lg:py-0",
   ];
-  const initClassName = [
+  const [initClassName, setInitClassName] = useState([
     "min-[1600px]:bg-white min-[1600px]:text-black text-white",
-  ];
+  ]);
 
   const buttonClassName = [
     "px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center border border-white hover:bg-gray-200 hover:text-black min-[1600px]:border-black min-[1600px]:text-black min-[1600px]:hover:bg-gray-200 opacity-0 lg:opacity-100",
   ];
   const buttonScrolledClassName = ["text-black bg-white"];
   const scrolledClassName = ["bg-black text-white"];
+  const [isScrolled,setIsScrolled] = useState(false)
   const [classNames, setClassNames] = useState({
     bg: [baseClassName, initClassName].join(" "),
     buttonBg: [buttonClassName].join(" "),
     hovered: false,
   });
   useEffect(() => {
+    if (pathname === "/research") {
+      setInitClassName([
+        "min-[1600px]:bg-black min-[1600px]:text-white text-black",
+      ]);
+      setClassNames({
+        hovered: false,
+        bg: [
+          baseClassName,
+          ["min-[1600px]:bg-black min-[1600px]:text-white text-black"],
+        ].join(" "),
+        buttonBg: [buttonClassName].join(" "),
+      });
+      console.log("//", classNames.bg);
+    } else {
+      setInitClassName([
+        "min-[1600px]:bg-white min-[1600px]:text-blck text-white",
+      ]);
+      setClassNames({
+        bg: [baseClassName, initClassName].join(" "),
+        buttonBg: [buttonClassName].join(" "),
+        hovered: false,
+      });
+    }
+  }, [pathname]);
+  useEffect(() => {
     window.addEventListener("scroll", function () {
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
       if (scrollTop > 100) {
+        setIsScrolled(true)
         setClassNames({
           hovered: false,
           bg: [baseClassName, scrolledClassName].join(" "),
           buttonBg: [buttonClassName, buttonScrolledClassName].join(" "),
         });
       } else {
+        setIsScrolled(false)
         setClassNames({
           hovered: false,
           bg: [baseClassName, initClassName].join(" "),
@@ -67,7 +97,7 @@ export default function Header() {
                   })
                 }
                 onMouseLeave={() =>
-                  setClassNames({
+                  !isScrolled&&setClassNames({
                     hovered: false,
                     bg: [baseClassName, initClassName].join(" "),
                     buttonBg: [buttonClassName].join(" "),
@@ -96,11 +126,11 @@ export default function Header() {
                     </Link>
                   </li>
                 </ul>
-                {classNames.hovered ? (
+                {/* {classNames.hovered ? (
                   <div className="bg-black absolute left-0 right-0 w-screen top-16 z-10 bg-opacity-95 h-4"></div>
                 ) : (
                   <></>
-                )}
+                )} */}
               </nav>
             </div>
             <div className="lg:w-2/12 flex justify-end items-center relative z-20">

@@ -1,13 +1,15 @@
+// import { connection } from "next/server";
 import "./globals.css";
-import Header from "@/components/ui/header";
+import Header from "@/app/components/header";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // connection()
   return (
     <html lang="en">
-      <body>
+      <body className="debug-screens">
         <Header></Header>
         {children}
         <footer>

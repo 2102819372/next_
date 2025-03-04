@@ -13,12 +13,12 @@ export default function Header() {
     "[@media(min-width:1600px)]:bg-white [@media(min-width:1600px)]:text-black text-white",
   ]);
 
-  const buttonClassName = [
+  const [buttonClassName, setButtonClassName] = useState([
     "px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center border border-white hover:bg-gray-200 hover:text-black [@media(min-width:1600px)]:border-black [@media(min-width:1600px)]:text-black [@media(min-width:1600px)]:hover:bg-gray-200 opacity-0 lg:opacity-100",
-  ];
+  ]);
   const buttonScrolledClassName = ["text-black bg-white"];
   const scrolledClassName = ["bg-black text-white"];
-  const [isScrolled,setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
   const [classNames, setClassNames] = useState({
     bg: [baseClassName, initClassName].join(" "),
     buttonBg: [buttonClassName].join(" "),
@@ -29,17 +29,25 @@ export default function Header() {
       setInitClassName([
         "[@media(min-width:1600px)]:bg-black [@media(min-width:1600px)]:text-white text-black",
       ]);
+      setButtonClassName([
+        "px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center border border-white hover:bg-gray-200 hover:text-black [@media(min-width:1600px)]:border-black [@media(min-width:1600px)]:text-black [@media(min-width:1600px)]:hover:bg-gray-200 opacity-0 lg:opacity-100 !text-black !bg-white",
+      ]);
       setClassNames({
         hovered: false,
         bg: [
           baseClassName,
-          ["[@media(min-width:1600px)]:bg-black [@media(min-width:1600px)]:text-white text-black"],
+          [
+            "[@media(min-width:1600px)]:bg-black [@media(min-width:1600px)]:text-white text-black",
+          ],
         ].join(" "),
         buttonBg: [buttonClassName].join(" "),
       });
     } else {
       setInitClassName([
         "[@media(min-width:1600px)]:bg-white [@media(min-width:1600px)]:text-black text-white",
+      ]);
+      setButtonClassName([
+        "px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center border border-white hover:bg-gray-200 hover:text-black [@media(min-width:1600px)]:border-black [@media(min-width:1600px)]:text-black [@media(min-width:1600px)]:hover:bg-gray-200 opacity-0 lg:opacity-100",
       ]);
       setClassNames({
         bg: [baseClassName, initClassName].join(" "),
@@ -53,14 +61,14 @@ export default function Header() {
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop;
       if (scrollTop > 100) {
-        setIsScrolled(true)
+        setIsScrolled(true);
         setClassNames({
           hovered: false,
           bg: [baseClassName, scrolledClassName].join(" "),
           buttonBg: [buttonClassName, buttonScrolledClassName].join(" "),
         });
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
         setClassNames({
           hovered: false,
           bg: [baseClassName, initClassName].join(" "),
@@ -72,7 +80,7 @@ export default function Header() {
   return (
     <>
       <header className={classNames.bg}>
-        <div className="ml-auto mr-auto pl-5 pr-5 max-w-screen-large">
+        <div className="rw-container max-w-screen-large">
           <div className="flex items-center justify-between static z-10">
             <div className="lg:w-2/12 relative z-20">
               <Link
@@ -86,7 +94,7 @@ export default function Header() {
             </div>
             <div>
               <nav
-                onMouseEnter={() =>
+                onMouseOver={() =>
                   setClassNames({
                     hovered: true,
                     bg: [baseClassName, scrolledClassName].join(" "),
@@ -96,7 +104,8 @@ export default function Header() {
                   })
                 }
                 onMouseLeave={() =>
-                  !isScrolled&&setClassNames({
+                  !isScrolled &&
+                  setClassNames({
                     hovered: false,
                     bg: [baseClassName, initClassName].join(" "),
                     buttonBg: [buttonClassName].join(" "),
@@ -104,32 +113,27 @@ export default function Header() {
                 }
               >
                 <ul className="hidden lg:flex items-center justify-center relative z-20 cursor-pointer">
-                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100">
+                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100 hover:opacity-60">
                     <Link className="rw-eyebrow px-4 py-2" href="/research">
                       Research
                     </Link>
                   </li>
-                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100">
+                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100 hover:opacity-60">
                     <Link className="rw-eyebrow px-4 py-2" href="/product">
                       Product
                     </Link>
                   </li>
-                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100">
+                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100 hover:opacity-60">
                     <Link className="rw-eyebrow px-4 py-2" href="/studios">
                       Studios
                     </Link>
                   </li>
-                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100">
+                  <li className="mb-5 pt-5 transition-all duration-200 false opacity-100 hover:opacity-60">
                     <Link className="rw-eyebrow px-4 py-2" href="/about">
                       Company
                     </Link>
                   </li>
                 </ul>
-                {/* {classNames.hovered ? (
-                  <div className="bg-black absolute left-0 right-0 w-screen top-16 z-10 bg-opacity-95 h-4"></div>
-                ) : (
-                  <></>
-                )} */}
               </nav>
             </div>
             <div className="lg:w-2/12 flex justify-end items-center relative z-20">
@@ -163,7 +167,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-      {/* {classNames.hovered?} */}
     </>
   );
 }

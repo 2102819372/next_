@@ -304,7 +304,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1004/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -312,7 +312,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1005/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -346,7 +346,7 @@ export default function Page() {
                 <Swipers
                   data={[
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1006/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -354,7 +354,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1007/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -362,7 +362,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1008/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -396,7 +396,7 @@ export default function Page() {
                 <Swipers
                   data={[
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1009/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -404,7 +404,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1010/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -412,7 +412,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1011/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -446,7 +446,7 @@ export default function Page() {
                 <Swipers
                   data={[
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1012/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -454,7 +454,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1013/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -462,7 +462,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1014/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -496,7 +496,7 @@ export default function Page() {
                 <Swipers
                   data={[
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1015/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -504,7 +504,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1016/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",
@@ -512,7 +512,7 @@ export default function Page() {
                       Year: "2024",
                     },
                     {
-                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      imgUrl: "https://picsum.photos/id/1017/1080/960",
                       title: "Episode 3: The Periphery",
                       subtitle: "Featuring Claire Hentschker & Golan Levin",
                       Director: "Dion Lee",

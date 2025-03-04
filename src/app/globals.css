@@ -64,7 +64,12 @@
   }
 }
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   :root {
+    --timesNow: "timesNow", "timesNow Fallback";
+    --abcNormal: "abcNormal", "abcNormal Fallback";
     --black: #000;
     --white: #fff;
     --none: #ffffff00;
@@ -724,6 +729,22 @@
   }
 }
 @layer base {
+  .rw-bodycopy2,
+  .rw-bodycopy3 {
+    font-family: var(--abcNormal);
+    line-height: 1.3;
+  }
+  .rw-bodycopy3 {
+    font-size: 14px;
+    letter-spacing: -0.14px;
+  }
+  .rw-eyebrow {
+    font-family: var(--abcNormal);
+    font-size: 11px;
+    font-weight: 450;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
   .rw-container {
     max-width: 1600px;
   }
@@ -863,10 +884,4 @@
       transform: translateY(0);
     }
   }
-  /* * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  } */
 }

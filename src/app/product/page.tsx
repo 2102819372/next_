@@ -9,8 +9,8 @@ export default function Page() {
   ];
   return (
     <main>
-      <section className="bg-white min-[1600px]:px-4">
-        <div className="flex lg:aspect-video flex-col items-center justify-center text-white relative xl:h-auto lg:max-h-[900px] w-full min-[1600px]:w-auto mx-auto min-[1600px]:mt-16 min-[1600px]:rounded-[3px] overflow-hidden h-[90vh] max-h-[660px] min-h-[500px]">
+      <section className="bg-white [@media(min-width:1600px)]:px-4">
+        <div className="flex lg:aspect-video flex-col items-center justify-center text-white relative xl:h-auto lg:max-h-[900px] w-full [@media(min-width(1600px))]:w-auto mx-auto [@media(min-width:1600px)]:mt-16 [@media(min-width:1600px)]:rounded-[3px] overflow-hidden h-[90vh] max-h-[660px] min-h-[500px]">
           <video
             muted
             autoPlay

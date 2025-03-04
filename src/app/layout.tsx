@@ -13,7 +13,7 @@ export default function RootLayout({
         <Header></Header>
         {children}
         <footer>
-          <section className="bg-black text-white pt-5 min-[1600px]:pt-28">
+          <section className="bg-black text-white pt-5 [@media(min-width:1600px)]:pt-28">
             <div className="ml-auto mr-auto pl-5 pr-5 max-w-[1600px]">
               <div className="aspect-video lg:aspect-[2.36] w-full rounded-[3px] mb-16 overflow-hidden relative">
                 <video autoPlay muted loop>

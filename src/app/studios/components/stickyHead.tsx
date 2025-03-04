@@ -16,7 +16,7 @@ export default function StickyHead() {
   });
   return (
     <div
-      className={`hidden lg:block fixed top-16 w-full z-[9] bg-gray-100 py-3 transition-opacity duration-300 ${
+      className={`hidden lg:block fixed top-16 w-full bg-gray-100 py-3 transition-opacity z-50 duration-300 ${
         isScrolled ? "opacity-100" : "opacity-0"
       }`}
     >

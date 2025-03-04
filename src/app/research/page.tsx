@@ -54,7 +54,7 @@ export default function Page() {
                 <Image
                   fill
                   alt=""
-                  className="!static w-full h-full object-cover scale-[1.01] group-hover:scale-105 transition-all duration-[3s] ease-linear"
+                  className="!static w-full h-full object-cover scale-[1.01] group-hover:scale-105 transition-all duration-3s ease-linear"
                   src="https://picsum.photos/1080/960"
                 />
               </div>
@@ -95,7 +95,7 @@ export default function Page() {
                     <Image
                       alt=""
                       fill
-                      className="!static w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                      className="!static w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                       src={`https://picsum.photos/id/${300 + e}/1080/960`}
                     ></Image>
                   </div>
@@ -155,7 +155,7 @@ export default function Page() {
                       alt=""
                       src={`https://picsum.photos/id/${e}/1080/960`}
                       fill
-                      className="!static w-full h-full object-cover scale-[1.01] transform-gpu hover:scale-110 transition-all duration-[3s] ease-linear"
+                      className="!static w-full h-full object-cover scale-[1.01] transform-gpu hover:scale-110 transition-all duration-3s ease-linear"
                     ></Image>
                   </div>
                   <div className="rw-h5 pr-5 group-hover:opacity-70 transition-opacity duration-200 flex items-center">
@@ -179,7 +179,7 @@ export default function Page() {
                     <Image
                       fill
                       alt=""
-                      className="!static w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                      className="!static w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                       src={`https://picsum.photos/id/${Math.floor(Math.random() * 1000)}/1080/960`}
                     />
                   </div>

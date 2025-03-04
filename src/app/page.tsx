@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Page() {
   return (
     <main>
-      <section className="bg-white min-[1600px]:px-4">
-        <div className="flex lg:aspect-video flex-col items-center justify-center text-white relative xl:h-auto lg:max-h-[900px] w-full min-[1600px]:w-auto mx-auto min-[1600px]:mt-16 min-[1600px]:rounded-[3px] overflow-hidden h-[90vh] max-h-[660px] min-h-[500px]">
+      <section className="bg-white [@media(min-width:1600px)]:px-4">
+        <div className="flex lg:aspect-video flex-col items-center justify-center text-white relative xl:h-auto lg:max-h-[900px] w-full [@media(min-width:1600px)]:w-auto mx-auto [@media(min-width:1600px)]:mt-16 [@media(min-width:1600px)]:rounded-[3px] overflow-hidden h-[90vh] max-h-[660px] min-h-[500px]">
           <VideoSwiper />
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function Page() {
                   <Image
                     fill
                     alt=""
-                    className="w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                    className="w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                     src="https://picsum.photos/1080/721"
                   />
                 </div>
@@ -70,7 +70,7 @@ export default function Page() {
                   <Image
                     fill
                     alt=""
-                    className="object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                    className="object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                     src="https://picsum.photos/1080/960"
                   />
                 </div>
@@ -95,7 +95,7 @@ export default function Page() {
                   <Image
                     fill
                     alt=""
-                    className="object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                    className="object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                     src="https://picsum.photos/1080/720"
                   />
                 </div>
@@ -135,7 +135,7 @@ export default function Page() {
         <div className="rw-container">
           <div className="sm:w-10/12 md:w-full xl:w-14/16 mx-auto">
             <div className="lg:w-1/2 mb-4">
-              <div className="min-[1024px]:text-[11px] font-medium">
+              <div className="[@media(min-width:1600px)]:text-[11px] font-medium">
                 Our Research
               </div>
               <div className="rw-h4 text-[22px]">
@@ -267,13 +267,13 @@ export default function Page() {
           <div className="flex justify-center mt-5">
             <Link
               href="#"
-              className="text-[16px] min-[1024]:text-[14px] px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center text-white border border-white hover:bg-white hover:text-black "
+              className="text-[16px] [@media(min-witdh:1600px)]:text-[14px] px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center text-white border border-white hover:bg-white hover:text-black "
             >
               Lorem, ipsum.
             </Link>
           </div>
           <div className="sm:w-10/12 md:w-full xl:w-14/16 mx-auto">
-            <div className="mt-24 lg:mt-48 mb-4 lg:mb-8 min-[1024px]:text-[30px] min-[768px]:text-[24px] text-[26px]">
+            <div className="mt-24 lg:mt-48 mb-4 lg:mb-8 [@media(min-witdh:1600px)]:text-[30px] [@media(min-width:768px)]:text-[24px] text-[26px]">
               Lorem ipsum dolor sit amet.
             </div>
             <div className="grid md:grid-cols-3 w-full gap-9 md:gap-2.5">
@@ -281,7 +281,7 @@ export default function Page() {
                 <Link className="group" key={e} href="#">
                   <div className="relative aspect-[1.48] w-full mb-3 rounded-[3px] overflow-hidden">
                     <Image
-                      className="w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                      className="w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                       fill
                       src={`https://picsum.photos/id/${100 + e}/1080/960`}
                       alt=""
@@ -322,7 +322,7 @@ export default function Page() {
                 <Link className="group" href="#" key={e}>
                   <div className="relative aspect-[1.48] w-full mb-3 rounded-[3px] overflow-hidden">
                     <Image
-                      className="w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-[3s] ease-linear"
+                      className="w-full h-full object-cover scale-[1.01] transform-gpu group-hover:scale-110 transition-all duration-3s ease-linear"
                       src={`https://picsum.photos/id/${200 + e}/1080/960 `}
                       alt=""
                       fill
@@ -334,7 +334,7 @@ export default function Page() {
           </div>
         </div>
         <div className="pb-16 lg:pb-32">
-          <div className="text-center mb-7 min-[1024px]:text-[13px] text-[14px] text-slate-400">
+          <div className="text-center mb-7 [@media(min-witdh:1600px)]:text-[13px] text-[14px] text-slate-400">
             Select Enterprise Partners
           </div>
           <div className="max-w-[1600px] ml-auto mr-auto pl-5 pr-5">

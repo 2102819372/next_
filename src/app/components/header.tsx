@@ -10,11 +10,11 @@ export default function Header() {
     "fixed top-0 w-full z-50 transition-colors duration-200 bg-opacity-95 py-4 lg:py-0",
   ];
   const [initClassName, setInitClassName] = useState([
-    "min-[1600px]:bg-white min-[1600px]:text-black text-white",
+    "[@media(min-width:1600px)]:bg-white [@media(min-width:1600px)]:text-black text-white",
   ]);
 
   const buttonClassName = [
-    "px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center border border-white hover:bg-gray-200 hover:text-black min-[1600px]:border-black min-[1600px]:text-black min-[1600px]:hover:bg-gray-200 opacity-0 lg:opacity-100",
+    "px-4 pt-[10px] pb-[11px] rounded-full inline-flex transition-all duration-200 items-center justify-center border border-white hover:bg-gray-200 hover:text-black [@media(min-width:1600px)]:border-black [@media(min-width:1600px)]:text-black [@media(min-width:1600px)]:hover:bg-gray-200 opacity-0 lg:opacity-100",
   ];
   const buttonScrolledClassName = ["text-black bg-white"];
   const scrolledClassName = ["bg-black text-white"];
@@ -27,20 +27,19 @@ export default function Header() {
   useEffect(() => {
     if (pathname === "/research") {
       setInitClassName([
-        "min-[1600px]:bg-black min-[1600px]:text-white text-black",
+        "[@media(min-width:1600px)]:bg-black [@media(min-width:1600px)]:text-white text-black",
       ]);
       setClassNames({
         hovered: false,
         bg: [
           baseClassName,
-          ["min-[1600px]:bg-black min-[1600px]:text-white text-black"],
+          ["[@media(min-width:1600px)]:bg-black [@media(min-width:1600px)]:text-white text-black"],
         ].join(" "),
         buttonBg: [buttonClassName].join(" "),
       });
-      console.log("//", classNames.bg);
     } else {
       setInitClassName([
-        "min-[1600px]:bg-white min-[1600px]:text-blck text-white",
+        "[@media(min-width:1600px)]:bg-white [@media(min-width:1600px)]:text-black text-white",
       ]);
       setClassNames({
         bg: [baseClassName, initClassName].join(" "),

@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import Swipers from "./components/swipers";
 import StickyHead from "./components/stickyHead";
 export default function Page() {
   return (
     <main>
-      <section className="bg-white min-[1600px]:px-4">
-        <div className="flex lg:aspect-[21/9] flex-col items-center justify-center text-white relative h-[450px] xl:h-auto lg:max-h-[900px] max-w-[1600px] w-full mx-auto min-[1600px]:mt-16 min-[1600px]:rounded-[3px] overflow-hidden">
+      <section className="bg-white [@media(min-width:1600px)]:px-4">
+        <div className="flex lg:aspect-[21/9] flex-col items-center justify-center text-white relative h-[450px] xl:h-auto lg:max-h-[900px] max-w-[1600px] w-full mx-auto [@media(min-width:1600px)]:mt-16 [@media(min-width:1600px)]:rounded-[3px] overflow-hidden">
           <video
             autoPlay
             muted
@@ -92,12 +93,11 @@ export default function Page() {
               Runway Studios is the production and entertainment arm of Runway.
               <br />
               <br />
-              We work directly with filmmakers, studios, musicians, writers and
-              independent artists <br className="hidden lg:block" /> to help
-              bring unique creative projects to life.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              <br className="hidden lg:block" />
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />
               <br />
-              <br />
-              If you have a project you'd like to discuss,{" "}
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               <a className="underline" href="/contact">
                 contact us
               </a>
@@ -147,7 +147,7 @@ export default function Page() {
               <Link href="#">
                 <div className="w-full aspect-[21/9] cursor-pointer rounded-[3px] group overflow-hidden">
                   <Image
-                    className="!static object-cover w-full h-full group-hover:scale-105 transition-all duration-[3s] ease-linear"
+                    className="!static object-cover w-full h-full group-hover:scale-105 transition-all duration-3s ease-linear"
                     alt=""
                     fill
                     src="https://picsum.photos/1080/960"
@@ -225,24 +225,306 @@ export default function Page() {
             </div>
           </section>
         </div>
-        <section className="studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
-          <div
-            className="absolute -top-20 w-16 h-1 left-0"
-            id="Creative Dialogues"
-          ></div>
-          <div className="rw-container">
-            <div className="flex justify-between mb-2.5 lg:mb-5">
-              <div>
-                <div className="rw-h2">Creative Dialogues</div>
-                <div className="md:w-2/3 rw-bodycopy1">
-                  A series of conversations exploring the relationship between
-                  creativity and AI, with the artists who are actually using it.
+        <div>
+          <section className="studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
+            <div
+              className="absolute -top-20 w-16 h-1 left-0"
+              id="Creative Dialogues"
+            ></div>
+            <div className="rw-container">
+              <div className="flex justify-between mb-2.5 lg:mb-5">
+                <div>
+                  <div className="rw-h2">Creative Dialogues</div>
+                  <div className="md:w-2/3 rw-bodycopy1">
+                    A series of conversations exploring the relationship between
+                    creativity and AI, with the artists who are actually using
+                    it.
+                  </div>
                 </div>
               </div>
+              <div className="relative mb-10 lg:mb-0">
+                <Swipers
+                  data={[
+                    {
+                      imgUrl: "https://picsum.photos/id/1001/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1002/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1001/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                  ]}
+                ></Swipers>
+              </div>
             </div>
-            <div className="relative mb-10 lg:mb-0"></div>
-          </div>
-        </section>
+          </section>
+        </div>
+        <div>
+          <section className="border-t-2 studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
+            <div
+              className="absolute -top-20 w-16 h-1 left-0"
+              id="Short Films"
+            ></div>
+            <div className="rw-container">
+              <div className="flex justify-between mb-2.5 lg:mb-5">
+                <div>
+                  <div className="rw-h2">Short Films</div>
+                  <div className="md:w-2/3 rw-bodycopy1">
+                    A series of conversations exploring the relationship between
+                    creativity and AI, with the artists who are actually using
+                    it.
+                  </div>
+                </div>
+              </div>
+              <div className="relative mb-10 lg:mb-0">
+                <Swipers
+                  data={[
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                  ]}
+                ></Swipers>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section className="border-t-2 studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
+            <div
+              className="absolute -top-20 w-16 h-1 left-0"
+              id="AIFF Panels"
+            ></div>
+            <div className="rw-container">
+              <div className="flex justify-between mb-2.5 lg:mb-5">
+                <div>
+                  <div className="rw-h2">AIFF Panels</div>
+                  <div className="md:w-2/3 rw-bodycopy1">
+                    A series of conversations exploring the relationship between
+                    creativity and AI, with the artists who are actually using
+                    it.
+                  </div>
+                </div>
+              </div>
+              <div className="relative mb-10 lg:mb-0">
+                <Swipers
+                  data={[
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section className="border-t-2 studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
+            <div
+              className="absolute -top-20 w-16 h-1 left-0"
+              id="Music Videos"
+            ></div>
+            <div className="rw-container">
+              <div className="flex justify-between mb-2.5 lg:mb-5">
+                <div>
+                  <div className="rw-h2">Music Videos</div>
+                  <div className="md:w-2/3 rw-bodycopy1">
+                    A series of conversations exploring the relationship between
+                    creativity and AI, with the artists who are actually using
+                    it.
+                  </div>
+                </div>
+              </div>
+              <div className="relative mb-10 lg:mb-0">
+                <Swipers
+                  data={[
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section className="border-t-2 studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
+            <div
+              className="absolute -top-20 w-16 h-1 left-0"
+              id="Physical Matter"
+            ></div>
+            <div className="rw-container">
+              <div className="flex justify-between mb-2.5 lg:mb-5">
+                <div>
+                  <div className="rw-h2">Physical Matter</div>
+                  <div className="md:w-2/3 rw-bodycopy1">
+                    A series of conversations exploring the relationship between
+                    creativity and AI, with the artists who are actually using
+                    it.
+                  </div>
+                </div>
+              </div>
+              <div className="relative mb-10 lg:mb-0">
+                <Swipers
+                  data={[
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section className="border-t-2 studios-section relative pt-12 lg:pt-16 overflow-hidden pb-12 lg:pb-20 bg-white text-black undefined">
+            <div
+              className="absolute -top-20 w-16 h-1 left-0"
+              id="Behind the Scenes"
+            ></div>
+            <div className="rw-container">
+              <div className="flex justify-between mb-2.5 lg:mb-5">
+                <div>
+                  <div className="rw-h2">Behind the Scenes</div>
+                  <div className="md:w-2/3 rw-bodycopy1">
+                    A series of conversations exploring the relationship between
+                    creativity and AI, with the artists who are actually using
+                    it.
+                  </div>
+                </div>
+              </div>
+              <div className="relative mb-10 lg:mb-0">
+                <Swipers
+                  data={[
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                    {
+                      imgUrl: "https://picsum.photos/id/1003/1080/960",
+                      title: "Episode 3: The Periphery",
+                      subtitle: "Featuring Claire Hentschker & Golan Levin",
+                      Director: "Dion Lee",
+                      "Run-time": "1:47",
+                      Year: "2024",
+                    },
+                  ]}
+                />
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   );

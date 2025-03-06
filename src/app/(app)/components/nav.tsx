@@ -11,16 +11,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function Nav() {
-  const pathname = usePathname();
-//   const [selectedNav, setSelectedNav] = useState("");
-  useEffect(() => {
-    // const _1 = pathname.split("/");
-    // if (_1.at(-1)) {
-                
-    // }
-
-    // setSelectedNav("");
-  }, [pathname]);
+  // const pathname = usePathname();
   const [userName, setUserName] = useState("");
   const [moreAssets, setMoreAssets] = useState(false);
   const moreComp = () => {
@@ -104,9 +95,9 @@ export default function Nav() {
       );
     }
   };
-  useEffect(() => {
-    setUserName(JSON.parse(localStorage.getItem("guestInfo") || "{}").userId);
-  }, []);
+    useEffect(() => {
+      setUserName(JSON.parse(localStorage.getItem("guestInfo") || "{}").userId);
+    }, []);
 
   return (
     <nav className="[@media(max-width:768px)]:hidden">
@@ -207,7 +198,7 @@ export default function Nav() {
                       </svg>
                       Home
                     </Link>
-                    <Link
+                    {/* <Link
                       href={`/teams/${userName}/dashboard`}
                       className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] hover:bg-ui-level0 px-[8px]"
                     >
@@ -234,7 +225,7 @@ export default function Nav() {
                         <polyline points="17 2 12 7 7 2"></polyline>
                       </svg>
                       Runway Watch
-                    </Link>
+                    </Link> */}
                   </div>
                   <div className="h-[32px] flex items-center">
                     <div className="h-[1px] w-full bg-slate-700"></div>
@@ -305,7 +296,7 @@ export default function Nav() {
                       </svg>
                       Favorited
                     </Link>
-                    {moreComp()}
+                    {/* {moreComp()} */}
                   </div>
                   <div className="h-[32px] flex items-center">
                     <div className="h-[1px] w-full bg-slate-700"></div>
@@ -346,7 +337,7 @@ export default function Nav() {
                           className="rounded-[4px]"
                           width={20}
                           height={20}
-                          src="https://picsum.photos/30"
+                          src="https://picsum.photos/id/99/30"
                           alt="img"
                         />
                       </div>
@@ -361,11 +352,11 @@ export default function Nav() {
                           className="rounded-[4px]"
                           width={20}
                           height={20}
-                          src="https://picsum.photos/30"
+                          src="https://picsum.photos/id/100/30"
                           alt="img"
                         />
                       </div>
-                      Generate Video
+                      Generate Image
                     </Link>
                     <Link
                       href={`/teams/${userName}/ai-tools/generate`}
@@ -376,13 +367,13 @@ export default function Nav() {
                           className="rounded-[4px]"
                           width={20}
                           height={20}
-                          src="https://picsum.photos/30"
+                          src="https://picsum.photos/id/101/30"
                           alt="img"
                         />
                       </div>
-                      Generate Video
+                      Generate Audio
                     </Link>
-                    <Link
+                    {/* <Link
                       href={`/teams/${userName}/ai-tools`}
                       className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] hover:bg-ui-level0"
                     >
@@ -410,8 +401,8 @@ export default function Nav() {
                           <rect width="7" height="7" x="3" y="14" rx="1"></rect>
                         </svg>
                       </div>
-                      Generate Video
-                    </Link>
+                      Generate Audio
+                    </Link> */}
                   </div>
                 </div>
               </div>

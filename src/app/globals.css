@@ -67,6 +67,7 @@
   html {
     scroll-behavior: smooth;
   }
+
   :root {
     --timesNow: "timesNow", "timesNow Fallback";
     --abcNormal: "abcNormal", "abcNormal Fallback";

@@ -32,6 +32,8 @@ export default {
         "surface-accent-gray-subtler": "var(--neutral-85)",
         "text-static": "var(--white)",
         "text-subtler": "var(--neutral-50)",
+        "ui-level0": "#121316",
+        "ui-level1-new": "#25262b",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
@@ -80,12 +82,15 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      fontFamily:{
-        "--abcNormal":["abcNormal", "abcNormal Fallback"]
+      fontFamily: {
+        "--abcNormal": ["abcNormal", "abcNormal Fallback"],
       },
-      transitionDuration:{
-        "3s":"3000ms"
-      }
+      transitionDuration: {
+        "3s": "3000ms",
+      },
+      padding: {
+        login: "calc(50% - 165px)",
+      },
     },
   },
   plugins: [

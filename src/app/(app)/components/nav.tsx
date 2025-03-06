@@ -8,8 +8,19 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
+  const pathname = usePathname();
+//   const [selectedNav, setSelectedNav] = useState("");
+  useEffect(() => {
+    // const _1 = pathname.split("/");
+    // if (_1.at(-1)) {
+                
+    // }
+
+    // setSelectedNav("");
+  }, [pathname]);
   const [userName, setUserName] = useState("");
   const [moreAssets, setMoreAssets] = useState(false);
   const moreComp = () => {
@@ -228,12 +239,13 @@ export default function Nav() {
                   <div className="h-[32px] flex items-center">
                     <div className="h-[1px] w-full bg-slate-700"></div>
                   </div>
+                  {/* assets */}
                   <div className="flex flex-col gap-[1px]">
                     <div className="items-center text-slate-400 flex text-[12px] font-medium  h-[32px] leading-[10px] uppercase px-[8px]">
                       Assets
                     </div>
                     <Link
-                      href={`/teams/${userName}/assets`}
+                      href={`/teams/${userName}/assets?tab=private`}
                       className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] hover:bg-ui-level0 px-[8px]"
                     >
                       <svg
@@ -253,7 +265,7 @@ export default function Nav() {
                       Private
                     </Link>
                     <Link
-                      href={`/teams/${userName}/assets`}
+                      href={`/teams/${userName}/assets?tab=shared`}
                       className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] hover:bg-ui-level0 px-[8px]"
                     >
                       <svg
@@ -274,7 +286,7 @@ export default function Nav() {
                       Shared
                     </Link>
                     <Link
-                      href={`/teams/${userName}/assets`}
+                      href={`/teams/${userName}/assets/favorites`}
                       className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] hover:bg-ui-level0 px-[8px]"
                     >
                       <svg
@@ -298,6 +310,7 @@ export default function Nav() {
                   <div className="h-[32px] flex items-center">
                     <div className="h-[1px] w-full bg-slate-700"></div>
                   </div>
+                  {/* tools */}
                   <div className="flex flex-col gap-[1px]">
                     <div className="items-center text-slate-400 flex text-[12px] font-medium  h-[32px] leading-[10px] uppercase px-[8px]">
                       Tools

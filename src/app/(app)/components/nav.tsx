@@ -8,93 +8,93 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 export default function Nav() {
   // const pathname = usePathname();
   const [userName, setUserName] = useState("");
-  const [moreAssets, setMoreAssets] = useState(false);
-  const moreComp = () => {
-    if (!moreAssets) {
-      return (
-        <button
-          type="button"
-          onClick={() => setMoreAssets(true)}
-          className="items-center text-slate-400 cursor-pointer flex text-[14px] font-normal h-[40px] leading-[20px] w-full bg-transparent gap-[6px] px-[8px] rounded-[8px] hover:bg-ui-level0"
-        >
-          More
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m6 9 6 6 6-6"></path>
-          </svg>
-        </button>
-      );
-    } else {
-      return (
-        <>
-          <Link
-            href={`/teams/${userName}/projects`}
-            className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] hover:bg-ui-level0"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-monitor-play item-module__icon__qkg6_"
-            >
-              <path d="m10 7 5 3-5 3Z"></path>
-              <rect width="20" height="14" x="2" y="3" rx="2"></rect>
-              <path d="M12 17v4"></path>
-              <path d="M8 21h8"></path>
-            </svg>
-            Video Editor Projects
-          </Link>
-          <Link
-            href={`/teams/${userName}/shared-with-me`}
-            className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] pl-[38px] hover:bg-ui-level0"
-          >
-            Shared Projects
-          </Link>
-          <button
-            type="button"
-            onClick={() => setMoreAssets(false)}
-            className="items-center text-slate-400 cursor-pointer flex text-[14px] font-normal h-[40px] leading-[20px] w-full bg-transparent gap-[6px] px-[8px] rounded-[8px] hover:bg-ui-level0"
-          >
-            Collapse
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-chevron-up "
-            >
-              <path d="m18 15-6-6-6 6"></path>
-            </svg>
-          </button>
-        </>
-      );
-    }
-  };
+  // const [moreAssets, setMoreAssets] = useState(false);
+  // const moreComp = () => {
+  //   if (!moreAssets) {
+  //     return (
+  //       <button
+  //         type="button"
+  //         onClick={() => setMoreAssets(true)}
+  //         className="items-center text-slate-400 cursor-pointer flex text-[14px] font-normal h-[40px] leading-[20px] w-full bg-transparent gap-[6px] px-[8px] rounded-[8px] hover:bg-ui-level0"
+  //       >
+  //         More
+  //         <svg
+  //           xmlns="http://www.w3.org/2000/svg"
+  //           width="16"
+  //           height="16"
+  //           viewBox="0 0 24 24"
+  //           fill="none"
+  //           stroke="currentColor"
+  //           strokeWidth="2"
+  //           strokeLinecap="round"
+  //           strokeLinejoin="round"
+  //         >
+  //           <path d="m6 9 6 6 6-6"></path>
+  //         </svg>
+  //       </button>
+  //     );
+  //   } else {
+  //     return (
+  //       <>
+  //         <Link
+  //           href={`/teams/${userName}/projects`}
+  //           className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] hover:bg-ui-level0"
+  //         >
+  //           <svg
+  //             xmlns="http://www.w3.org/2000/svg"
+  //             width="16"
+  //             height="16"
+  //             viewBox="0 0 24 24"
+  //             fill="none"
+  //             stroke="currentColor"
+  //             strokeWidth="2"
+  //             strokeLinecap="round"
+  //             strokeLinejoin="round"
+  //             className="lucide lucide-monitor-play item-module__icon__qkg6_"
+  //           >
+  //             <path d="m10 7 5 3-5 3Z"></path>
+  //             <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+  //             <path d="M12 17v4"></path>
+  //             <path d="M8 21h8"></path>
+  //           </svg>
+  //           Video Editor Projects
+  //         </Link>
+  //         <Link
+  //           href={`/teams/${userName}/shared-with-me`}
+  //           className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] pl-[38px] hover:bg-ui-level0"
+  //         >
+  //           Shared Projects
+  //         </Link>
+  //         <button
+  //           type="button"
+  //           onClick={() => setMoreAssets(false)}
+  //           className="items-center text-slate-400 cursor-pointer flex text-[14px] font-normal h-[40px] leading-[20px] w-full bg-transparent gap-[6px] px-[8px] rounded-[8px] hover:bg-ui-level0"
+  //         >
+  //           Collapse
+  //           <svg
+  //             xmlns="http://www.w3.org/2000/svg"
+  //             width="16"
+  //             height="16"
+  //             viewBox="0 0 24 24"
+  //             fill="none"
+  //             stroke="currentColor"
+  //             strokeWidth="2"
+  //             strokeLinecap="round"
+  //             strokeLinejoin="round"
+  //             className="lucide lucide-chevron-up "
+  //           >
+  //             <path d="m18 15-6-6-6 6"></path>
+  //           </svg>
+  //         </button>
+  //       </>
+  //     );
+  //   }
+  // };
     useEffect(() => {
       setUserName(JSON.parse(localStorage.getItem("guestInfo") || "{}").userId);
     }, []);

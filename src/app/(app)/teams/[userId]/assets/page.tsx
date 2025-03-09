@@ -33,7 +33,6 @@ export default async function Page({
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-folder-plus "
             >
               <path d="M12 10v6"></path>
               <path d="M9 13h6"></path>
@@ -52,7 +51,6 @@ export default async function Page({
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-cloud-upload "
             >
               <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
               <path d="M12 12v9"></path>
@@ -64,9 +62,9 @@ export default async function Page({
         <div className="px-[16px]">
           <div className="border-b-[1px] border-ui-level0 justify-between items-center bg-black flex gap-[8px] pb-[16px]">
             <div className="flex gap-1">
-              <Select>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="type" />
+              <Select >
+                <SelectTrigger className="w-[180px] text-white">
+                  <SelectValue  placeholder="type" />
                 </SelectTrigger>
                 <SelectContent className="bg-ui-level0 text-white border-none">
                   <SelectGroup>
@@ -79,8 +77,8 @@ export default async function Page({
                 </SelectContent>
               </Select>
               <Select>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="media" />
+                <SelectTrigger className="w-[180px] text-white">
+                  <SelectValue placeholder="media"/>
                 </SelectTrigger>
                 <SelectContent className="bg-ui-level0 text-white border-none">
                   <SelectGroup>
@@ -94,8 +92,8 @@ export default async function Page({
                 </SelectContent>
               </Select>
               <Select>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="tag" />
+                <SelectTrigger className="w-[180px] text-white">
+                  <SelectValue placeholder="tag"/>
                 </SelectTrigger>
                 <SelectContent className="bg-ui-level0 text-white border-none">
                   <SelectGroup>
@@ -162,7 +160,7 @@ export default async function Page({
                 </svg>
               </button>
               <Select>
-                <SelectTrigger className="w-[180px]">
+                <SelectTrigger className="w-[180px] text-white">
                   <SelectValue placeholder="date created" />
                 </SelectTrigger>
                 <SelectContent className="bg-ui-level0 text-white border-none">
@@ -177,7 +175,7 @@ export default async function Page({
                     <SelectLabel>order</SelectLabel>
                     <SelectItem value="newest first">
                       newest first
-                    </SelectItem>{" "}
+                    </SelectItem>
                     <SelectItem value="oldest first">oldest first</SelectItem>
                   </SelectGroup>
                 </SelectContent>
@@ -203,7 +201,6 @@ export default async function Page({
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-folder asset-group-tile-module__folderIcon__iy3o0"
                     >
                       <path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"></path>
                     </svg>

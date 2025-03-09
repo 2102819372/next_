@@ -46,7 +46,7 @@ export default function Page() {
               href={`/teams/${userName}/ai-tools/generate`}
               className="items-center aspect-[1.2] bg-gray-900 rounded-[8px] flex-col justify-center pt-[24px] px-[24px] pb-[16px]"
             >
-              <div className="items-center bg-ui-level1-new rounded-[4px] flex h-[100%] felx-1 justify-center mb-[20px] w-full">
+              <div className="items-center bg-ui-level1-new rounded-[4px] flex h-[100%] felx-1 justify-center w-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -57,7 +57,6 @@ export default function Page() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-plus "
                 >
                   <path d="M5 12h14"></path>
                   <path d="M12 5v14"></path>

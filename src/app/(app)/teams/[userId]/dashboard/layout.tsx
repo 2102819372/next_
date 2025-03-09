@@ -1,6 +1,6 @@
-import "../globals.css";
-import Header from "./components/header";
-import Nav from "./components/nav";
+import "@/app/globals.css"
+import Header from "@/app/(app)/components/header"
+import Nav from "@/app/(app)/components/nav";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>

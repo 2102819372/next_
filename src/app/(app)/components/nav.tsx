@@ -13,91 +13,10 @@ import { useEffect, useState } from "react";
 export default function Nav() {
   // const pathname = usePathname();
   const [userName, setUserName] = useState("");
-  // const [moreAssets, setMoreAssets] = useState(false);
-  // const moreComp = () => {
-  //   if (!moreAssets) {
-  //     return (
-  //       <button
-  //         type="button"
-  //         onClick={() => setMoreAssets(true)}
-  //         className="items-center text-slate-400 cursor-pointer flex text-[14px] font-normal h-[40px] leading-[20px] w-full bg-transparent gap-[6px] px-[8px] rounded-[8px] hover:bg-ui-level0"
-  //       >
-  //         More
-  //         <svg
-  //           xmlns="http://www.w3.org/2000/svg"
-  //           width="16"
-  //           height="16"
-  //           viewBox="0 0 24 24"
-  //           fill="none"
-  //           stroke="currentColor"
-  //           strokeWidth="2"
-  //           strokeLinecap="round"
-  //           strokeLinejoin="round"
-  //         >
-  //           <path d="m6 9 6 6 6-6"></path>
-  //         </svg>
-  //       </button>
-  //     );
-  //   } else {
-  //     return (
-  //       <>
-  //         <Link
-  //           href={`/teams/${userName}/projects`}
-  //           className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] hover:bg-ui-level0"
-  //         >
-  //           <svg
-  //             xmlns="http://www.w3.org/2000/svg"
-  //             width="16"
-  //             height="16"
-  //             viewBox="0 0 24 24"
-  //             fill="none"
-  //             stroke="currentColor"
-  //             strokeWidth="2"
-  //             strokeLinecap="round"
-  //             strokeLinejoin="round"
-  //             className="lucide lucide-monitor-play item-module__icon__qkg6_"
-  //           >
-  //             <path d="m10 7 5 3-5 3Z"></path>
-  //             <rect width="20" height="14" x="2" y="3" rx="2"></rect>
-  //             <path d="M12 17v4"></path>
-  //             <path d="M8 21h8"></path>
-  //           </svg>
-  //           Video Editor Projects
-  //         </Link>
-  //         <Link
-  //           href={`/teams/${userName}/shared-with-me`}
-  //           className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] pl-[38px] hover:bg-ui-level0"
-  //         >
-  //           Shared Projects
-  //         </Link>
-  //         <button
-  //           type="button"
-  //           onClick={() => setMoreAssets(false)}
-  //           className="items-center text-slate-400 cursor-pointer flex text-[14px] font-normal h-[40px] leading-[20px] w-full bg-transparent gap-[6px] px-[8px] rounded-[8px] hover:bg-ui-level0"
-  //         >
-  //           Collapse
-  //           <svg
-  //             xmlns="http://www.w3.org/2000/svg"
-  //             width="16"
-  //             height="16"
-  //             viewBox="0 0 24 24"
-  //             fill="none"
-  //             stroke="currentColor"
-  //             strokeWidth="2"
-  //             strokeLinecap="round"
-  //             strokeLinejoin="round"
-  //             className="lucide lucide-chevron-up "
-  //           >
-  //             <path d="m18 15-6-6-6 6"></path>
-  //           </svg>
-  //         </button>
-  //       </>
-  //     );
-  //   }
-  // };
-    useEffect(() => {
-      setUserName(JSON.parse(localStorage.getItem("guestInfo") || "{}").userId);
-    }, []);
+
+  useEffect(() => {
+    setUserName(JSON.parse(localStorage.getItem("guestInfo") || "{}").userId);
+  }, []);
 
   return (
     <nav className="[@media(max-width:768px)]:hidden">
@@ -142,10 +61,28 @@ export default function Nav() {
                   </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-ui-level0 text-white border-none w-[228px] ">
-                  <DropdownMenuItem>Profile</DropdownMenuItem>
-                  <DropdownMenuItem>Billing</DropdownMenuItem>
-                  <DropdownMenuItem>Team</DropdownMenuItem>
-                  <DropdownMenuItem>Subscription</DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href={`/teams/${userName}/settings`}
+                      className="w-full h-full flex justify-between items-start"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                      <div className="mx-auto">my account</div>
+                    </Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <div className="bg-gray-700 h-[1px] w-full"></div>
@@ -296,7 +233,6 @@ export default function Nav() {
                       </svg>
                       Favorited
                     </Link>
-                    {/* {moreComp()} */}
                   </div>
                   <div className="h-[32px] flex items-center">
                     <div className="h-[1px] w-full bg-slate-700"></div>
@@ -373,36 +309,6 @@ export default function Nav() {
                       </div>
                       Generate Audio
                     </Link>
-                    {/* <Link
-                      href={`/teams/${userName}/ai-tools`}
-                      className="items-center text-white flex text-[14px] font-medium h-[40px] leading-[20px] rounded-[8px] gap-[14px] px-[8px] hover:bg-ui-level0"
-                    >
-                      <div className="relative flex items-center justify-center rounded-[4px] bg-ui-level1-new">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <rect width="7" height="7" x="3" y="3" rx="1"></rect>
-                          <rect width="7" height="7" x="14" y="3" rx="1"></rect>
-                          <rect
-                            width="7"
-                            height="7"
-                            x="14"
-                            y="14"
-                            rx="1"
-                          ></rect>
-                          <rect width="7" height="7" x="3" y="14" rx="1"></rect>
-                        </svg>
-                      </div>
-                      Generate Audio
-                    </Link> */}
                   </div>
                 </div>
               </div>

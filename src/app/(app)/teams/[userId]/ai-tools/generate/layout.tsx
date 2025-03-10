@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="w-full flex bg-black min-h-[44px] px-[6px] py-[10px] items-center justify-between border border-gray-700 flex-nowrap">
               <DropdownMenu>
                 <DropdownMenuTrigger>
-                  <button className="bg-transparent p-0 outline-0 border-0 flex items-center gap-[4px] cursor-pointer">
+                  <div className="bg-transparent p-0 outline-0 border-0 flex items-center gap-[4px] cursor-pointer">
                     <div className="flex items-center justify-center h-[28px] w-[28px] rounded-[6px] text-gray-400">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         <line x1="4" x2="20" y1="18" y2="18"></line>
                       </svg>
                     </div>
-                  </button>
+                  </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-ui-level0 border-none ml-[16px]">
                   <DropdownMenuItem className="text-white">

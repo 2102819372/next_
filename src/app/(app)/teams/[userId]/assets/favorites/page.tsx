@@ -59,7 +59,7 @@ import {
             <div className="border-b-[1px] border-ui-level0 justify-between items-center bg-black flex gap-[8px] pb-[16px]">
               <div className="flex gap-1">
                 <Select>
-                  <SelectTrigger className="w-[180px]">
+                  <SelectTrigger className="w-[180px] text-white">
                     <SelectValue placeholder="type" />
                   </SelectTrigger>
                   <SelectContent className="bg-ui-level0 text-white border-none">
@@ -73,7 +73,7 @@ import {
                   </SelectContent>
                 </Select>
                 <Select>
-                  <SelectTrigger className="w-[180px]">
+                  <SelectTrigger className="w-[180px] text-white">
                     <SelectValue placeholder="media" />
                   </SelectTrigger>
                   <SelectContent className="bg-ui-level0 text-white border-none">
@@ -88,7 +88,7 @@ import {
                   </SelectContent>
                 </Select>
                 <Select>
-                  <SelectTrigger className="w-[180px]">
+                  <SelectTrigger className="w-[180px] text-white">
                     <SelectValue placeholder="tag" />
                   </SelectTrigger>
                   <SelectContent className="bg-ui-level0 text-white border-none">
